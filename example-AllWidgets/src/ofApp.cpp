@@ -12,7 +12,7 @@ void ofApp::setup(){
     ddl = NULL;
     textInput = NULL;
     img = new ofImage();
-    img->loadImage("nerd_me.png");
+    img->load("nerd_me.png");
     buffer = new float[256];
     for(int i = 0; i < 256; i++) { buffer[i] = ofNoise(i/100.0); }
     
@@ -280,12 +280,12 @@ void ofApp::drawGrid(float x, float y)
     
     for(int i = 0; i < h; i+=y)
     {
-        ofLine(0,i,w,i);
+        ofDrawLine(0,i,w,i);
     }
     
     for(int j = 0; j < w; j+=x)
     {
-        ofLine(j,0,j,h);
+        ofDrawLine(j,0,j,h);
     }
 }
 
